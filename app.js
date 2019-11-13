@@ -26,7 +26,7 @@ var svg = d3.select("#scatter") //Refences div tag with scatter ID
 
 
 // Load data.csv
-d3.csv("assets/data.csv"), function(healthData) {
+d3.csv("assets/data.csv").then(function(data) {
   console.log(healthData);
 
   
@@ -101,4 +101,4 @@ d3.csv("assets/data.csv"), function(healthData) {
       .attr("transform", `translate(${width / 2}, ${height + margin.top})`)
       .attr("class", "axisText")
       .text("Population in Poverty (%)");
-  }; //);
+  });
